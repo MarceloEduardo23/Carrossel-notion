@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+
+body {
+  margin:0;
+  overflow:hidden;
+}
+
+.carousel {
+  width:100%;
+  height:300px;
+  position:relative;
+}
+
+.slide {
+  position:absolute;
+  width:100%;
+  height:100%;
+  opacity:0;
+  transition:opacity 1s;
+}
+
+.slide img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.active {
+  opacity:1;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="carousel">
+
+<a href="https://www.notion.so/edge-vertex/T6c-Notion-Zero-320d66a09e5f80869f28f1a86417015e?source=copy_link" class="slide active">
+<img src="1.png">
+</a>
+
+<a href="https://www.notion.so/edge-vertex/T6c-Notion-Zero-320d66a09e5f80869f28f1a86417015e?source=copy_link" class="slide">
+<img src="2.png">
+</a>
+
+<a href="https://www.notion.so/edge-vertex/T6c-Notion-Zero-320d66a09e5f80869f28f1a86417015e?source=copy_link" class="slide">
+<img src="3.webp">
+</a>
+
+</div>
+
+<script>
+
+let slides = document.querySelectorAll(".slide")
+let i = 0
+
+setInterval(() => {
+
+slides[i].classList.remove("active")
+
+i++
+if(i >= slides.length) i = 0
+
+slides[i].classList.add("active")
+
+}, 3000)
+
+</script>
+
+</body>
+</html>
